@@ -10,7 +10,7 @@ public class _scrEnvMsg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stgnumgApers = "5531113583";
+        //stgnumgApers = "0";
         //msgEnv = panel1.GetComponent<TMP_InputField>();
         escMsg = new TMP_InputField.SubmitEvent();
         escMsg.AddListener(escrMsg);
