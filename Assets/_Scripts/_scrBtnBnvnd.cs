@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class _scrBtnBnvnd : MonoBehaviour
 {
+    /*************************************************************************************/
+    /*****Esta clase controla la navegación entre las escenas*****************************/
+    /*************************************************************************************/
     public void Inicio()
     {
         SceneManager.LoadScene(0);

@@ -3,6 +3,10 @@ using TMPro;
 
 public class _scrDispNombres : MonoBehaviour
 {
+    /*************************************************************************************************/
+    /*Esta clase nos permite mostrar los nombres que escribión el usuario*****************************/
+    /*estos se muestran en la parte de la confirmación de los datos **********************************/
+    /*************************************************************************************************/
     public TMP_Text nvisita, ngAPerson;
     private string stgvisita, stggAperson;
 
@@ -19,15 +23,6 @@ public class _scrDispNombres : MonoBehaviour
             stggAperson = _ScrRcbInf.stgNgAperson.ToString();
             ngAPerson.text = stggAperson;
             Debug.Log("verifg " + stggAperson);
-        }
-        
-        /*        stgvisita = _ScrRcbInf.stgNvisit;
-                nvisita.text = stgvisita.ToString();
-                stggAperson = _ScrRcbInf.stgNgAperson;
-                ngAPerson.text = stggAperson.ToString();
-
-        */
-
-
+        }       
     }
 }

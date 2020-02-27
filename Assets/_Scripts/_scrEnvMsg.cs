@@ -3,6 +3,10 @@ using TMPro;
 
 public class _scrEnvMsg : MonoBehaviour
 {
+    /***************************************************************************************/
+    /******Esta clase toma el mensaje que escribe el visitante *****************************/
+    /******y envía el mensaje al colaborador de gA******************************************/
+    /***************************************************************************************/
     public TMP_InputField msgEnv;
     public GameObject panel1, panel2;
     public string stgnumgApers, stgmsgtxt, URL;
