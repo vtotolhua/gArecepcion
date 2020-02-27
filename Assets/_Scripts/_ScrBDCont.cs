@@ -23,9 +23,10 @@ public class _ScrBDCont : MonoBehaviour
             string[] nomfile = tomalineas[i].Split(',');
             contactosinfo.Add(new _classContInf(nomfile[0], nomfile[1], nomfile[2]));
         }
-        foreach (_classContInf contacto in contactosinfo)
+/*        foreach (_classContInf contacto in contactosinfo)
         {
             print(contacto.gAnombre + " " + contacto.telef + " " + contacto.correo);
         }
+*/
     }
 }
