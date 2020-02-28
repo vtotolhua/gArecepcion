@@ -7,8 +7,9 @@ public class _scrDispNombres : MonoBehaviour
     /*Esta clase nos permite mostrar los nombres que escribión el usuario*****************************/
     /*estos se muestran en la parte de la confirmación de los datos **********************************/
     /*************************************************************************************************/
-    public TMP_Text nvisita, ngAPerson;
+    public  TMP_Text nvisita, ngAPerson;
     private string stgvisita, stggAperson, temper;
+    public static string numcont, gacont;
     public _ScrBDCont basecontactos;
     public _classContInf listacont;
     
@@ -22,23 +23,26 @@ public class _scrDispNombres : MonoBehaviour
 
         if (gameObject.tag == "gAPerson") {
             stggAperson = _ScrRcbInf.stgNgAperson.ToString();
-            int vez = 0;
-            bool tiene;
+            //int vez = 0;
+            //bool tiene;
             foreach (_classContInf contacto in basecontactos.contactosinfo)
             {
                 temper = contacto.gAnombre;
-                print("nombre ingresado " + stggAperson + " " + vez);
-                print("nombre a comparar " + temper);
+                //print("nombre ingresado " + stggAperson + " " + vez);
+                //print("nombre a comparar " + temper);
                 if(temper.Contains(stggAperson) == true)
                 {
                     ngAPerson.text = temper;
-                    tiene = temper.Contains(stggAperson);
-                    print(tiene);
+                    gacont = temper;
+                    numcont = contacto.telef;
+                    print("nombre: " + gacont + " " + "numero tel: " + numcont);
+                    //tiene = temper.Contains(stggAperson);
+                    //print(tiene);
                     break;
                 }
                 else
                     ngAPerson.text = "no encontramos a la persona";
-                vez ++;
+                //vez ++;
             }
             //ngAPerson.text = stggAperson;
             //stggAperson = basecontactos.contactosinfo[0].gAnombre.ToString();
