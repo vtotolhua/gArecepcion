@@ -5,12 +5,18 @@ public class _scrBtnBnvnd : MonoBehaviour
 {
     public void Inicio()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Entrada");
     }
     public void Personal() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Personal");
     }
-    public void Entrevista()
+    public void Loby() {
+        SceneManager.LoadScene("Loby");
+    }
+    public void Espera() {
+        SceneManager.LoadScene("Espera");
+    }
+    /*    public void Entrevista()
     {
         SceneManager.LoadScene(2);
     }
@@ -18,10 +24,5 @@ public class _scrBtnBnvnd : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
-    public void Sigui1() {
-        SceneManager.LoadScene(4);
-    }
-    public void Sigui2() {
-        SceneManager.LoadScene(5);
-    }
+*/
 }
