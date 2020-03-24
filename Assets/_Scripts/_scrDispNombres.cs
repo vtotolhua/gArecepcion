@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using TMPro;
-using System.Data;
-using System.Collections.Generic;
 public class _scrDispNombres : MonoBehaviour
 {
     /*************************************************************************************************/
@@ -10,9 +8,9 @@ public class _scrDispNombres : MonoBehaviour
     /*************************************************************************************************/
     public  TMP_Text nvisita, ngAPerson;
     private string stgvisita, stggAperson, temper;
-    //public static string numcont, gacont;
-    //public _ScrBDCont basecontactos;
-    //public _classContInf listacont;
+    public static string numcont, gacont;
+    public _ScrBDCont basecontactos;
+    public _classContInf listacont;
     
     void Start()
     {

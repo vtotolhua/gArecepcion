@@ -16,13 +16,4 @@ public class _scrBtnBnvnd : MonoBehaviour
     public void Espera() {
         SceneManager.LoadScene("Espera");
     }
-    /*    public void Entrevista()
-    {
-        SceneManager.LoadScene(2);
-    }
-    public void Reunion()
-    {
-        SceneManager.LoadScene(3);
-    }
-*/
 }

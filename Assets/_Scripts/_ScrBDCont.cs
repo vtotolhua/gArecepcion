@@ -5,29 +5,16 @@ using UnityEngine;
 
 public class _ScrBDCont : MonoBehaviour
 {
-    //private string filepath = "Assets/_Contactos/listacontactos.txt";
     private TextAsset filepath;
     public List<_classContInf> contactosinfo = new List<_classContInf>();
-
-    // Start is called before the first frame update
     void Start()
     {
-
-  /*      Debug.Log(" mucho " + contasss.ToString());
-        string[] tomalineas = contasss.text.Split(';');
-        for (int i = 0; i<tomalineas.Length; i++)
-        {
-                    Debug.Log("netas " + tomalineas[i]); 
-        }
-        //filepath = contasss.ToString();*/
         llenadoLista();
     }
 
     private void llenadoLista()
     {
         TextAsset filepath = Resources.Load<TextAsset>("liscont");
-        //string[] tomalineas = File.ReadAllLines(filepath);
-        //string[] tomalineas = contasss.ReadAllLines(filepath);
         string[] tomalineas = filepath.text.Split(';');
         for (int i = 0; i < tomalineas.Length-1; i++)
         {
