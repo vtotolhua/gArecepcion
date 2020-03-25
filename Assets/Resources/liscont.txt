@@ -1,7 +1,7 @@
-vladimir totolhua cotzomi,2225993330,vtotolhua@grupoassa.com
-yu chen cheng,5531113583,ycheng@grupoassa.com
-camilo jose sanchez ramos,2223321260,casanchez@grupoassa.com
-yanis amairan perez sanchez,551334775,yaperez@grupoassa.com
-ana laura salazar Mondragon,5530596932,asalazar@grupoassa.com
-Diana Alicia Garfias Soriano,2227348285,dianitagarfias@gmail.com
-yanis maria gutierrez, 1111222233,yanism@hotmail.com 
+vladimir totolhua cotzomi,2225993330,vtotolhua@grupoassa.com;
+yu chen cheng,5531113583,ycheng@grupoassa.com;
+camilo jose sanchez ramos,2223321260,casanchez@grupoassa.com;
+yanis amairan perez sanchez,551334775,yaperez@grupoassa.com;
+ana laura salazar Mondragon,5530596932,asalazar@grupoassa.com;
+Diana Alicia Garfias Soriano,2227348285,dianitagarfias@gmail.com;
+yanis maria gutierrez,1111222233,yanism@hotmail.com; 

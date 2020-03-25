@@ -11,11 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Personal.unity
     guid: e5c0fa52ef648aa45b7aadebf630168c
-  - enabled: 1
-    path: Assets/_Scenes/Entrevista.unity
+  - enabled: 0
+    path: Assets/_Scenes/_Entrevista.unity
     guid: dc1b594668f84e74c857eacb3970738b
-  - enabled: 1
-    path: Assets/_Scenes/Reunion.unity
+  - enabled: 0
+    path: Assets/_Scenes/_Reunion.unity
     guid: 841a70124a702a24bbb2844a11ded4d6
   - enabled: 1
     path: Assets/_Scenes/Loby.unity

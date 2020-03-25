@@ -29,10 +29,12 @@ public class _ScrRcbInf : MonoBehaviour
     }
     private void EnvInfvisit(string nombre1) {
         stgNvisit = nombre1.ToLower();
+        //print("visita" + stgNvisit);
     }
     private void EnvInfgAper(string nombre2)
     {
         nombre2 = nombre2.ToLower();
         stgNgAperson = nombre2;
+        //print("Empleado" + stgNgAperson);
     }
 }

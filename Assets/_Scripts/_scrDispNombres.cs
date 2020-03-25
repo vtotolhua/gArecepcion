@@ -35,9 +35,9 @@ public class _scrDispNombres : MonoBehaviour
                     ngAPerson.text = temper;
                     gacont = temper;
                     numcont = contacto.telef;
-                    print("nombre: " + gacont + " " + "numero tel: " + numcont);
-                    //tiene = temper.Contains(stggAperson);
-                    //print(tiene);
+                  //  print("nombre: " + gacont + " " + "numero tel: " + numcont);
+                  //  tiene = temper.Contains(stggAperson);
+                  //  print(tiene);
                     break;
                 }
                 else
