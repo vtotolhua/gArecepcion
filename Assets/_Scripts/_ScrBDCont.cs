@@ -8,7 +8,6 @@ public class _ScrBDCont : MonoBehaviour
     public List<_classContInf> contactosinfo = new List<_classContInf>();
     void Start()
     {
-
         llenadoLista();
     }
     private void llenadoLista()
