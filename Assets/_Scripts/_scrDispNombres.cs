@@ -13,7 +13,7 @@ public class _scrDispNombres : MonoBehaviour
     public  TMP_Text nvisita, ngAPerson;
     private string stgvisita, stggAperson, temper;
     public static string numcont, gacont;
-    public _ScrBDCont basecontactos;
+    [SerializeField] _ScrBDCont basecontactos;
     public _classContInf listacont;
 
     private List<string> nombres = new List<string>();
@@ -27,6 +27,7 @@ public class _scrDispNombres : MonoBehaviour
         }
 
         if (gameObject.tag == "gAPerson") {
+            basecontactos = GameObject.FindGameObjectWithTag("contactos").GetComponent<_ScrBDCont>();
             StartCoroutine ("displnom");
         }
     }
