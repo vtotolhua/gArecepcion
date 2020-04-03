@@ -45,18 +45,17 @@ public class _scrDispNombres : MonoBehaviour
         stggAperson = _ScrRcbInf.stgNgAperson.ToString();
         //compara el nombre que introdujo el usuario para encontrar las coincidencias en la base de datos
         //por el momento hace una lista, lo ideal es hacer spawn del objeto que muestra los nombres. 
-        foreach (_classContInf contacto in basecontactos.contactosinfo){
+        foreach (_classContInf contacto in basecontactos.contactosinfo)
+        {
             temper = contacto.gAnombre;
             if (temper.Contains(stggAperson))
             {
             //creamos lista que tiene nombres parecidos
             contCoincide.Add(new _classContInf(contacto.gAnombre, contacto.telef,contacto.correo));
-//            nombres.Add(string.Format("{0}", "{1}", temper, numcont));
-            ngAPerson.text = temper;
-            gacont = temper;
-            numcont = contacto.telef; 
-            //tomamos la información de nombre y teléfono de la base de datos
-            //break;
+//           ngAPerson.text = temper;
+//           gacont = temper;
+//           numcont = contacto.telef; 
+//           break;
             }
             else 
             ngAPerson.text = "no encontramos a la persona";
@@ -65,17 +64,6 @@ public class _scrDispNombres : MonoBehaviour
         foreach(_classContInf coincide in contCoincide){
             print("coincidencias " + coincide.gAnombre + " tel  " + coincide.telef + " mail " + coincide.correo ) ;
         }
-/*        for (int i = 0; i<nombres.Count; i++  )
-        {
-            Console.WriteLine(nombres);
-            print("nombres en lista " + nombres.ToString()); 
-            
-        }
-
-        foreach(string coinci in nombres){
-            print("nombres en lista2 " + nombres.ToString());
-        }
-*/
         yield return null;
     }
 }
