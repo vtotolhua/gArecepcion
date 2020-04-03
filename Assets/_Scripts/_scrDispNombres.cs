@@ -14,6 +14,7 @@ public class _scrDispNombres : MonoBehaviour
     private string stgvisita, stggAperson, temper;
     public static string numcont, gacont;
     [SerializeField] _ScrBDCont basecontactos;
+    public List<_classContInf> contCoincide = new List<_classContInf>(); 
     private GameObject dbcontact;
     public _classContInf listacont;
 
@@ -42,25 +43,39 @@ public class _scrDispNombres : MonoBehaviour
     {
         //El nombre del colaborador gA
         stggAperson = _ScrRcbInf.stgNgAperson.ToString();
+        //compara el nombre que introdujo el usuario para encontrar las coincidencias en la base de datos
+        //por el momento hace una lista, lo ideal es hacer spawn del objeto que muestra los nombres. 
         foreach (_classContInf contacto in basecontactos.contactosinfo){
             temper = contacto.gAnombre;
             if (temper.Contains(stggAperson))
             {
             //creamos lista que tiene nombres parecidos
-            nombres.Add(string.Format("{0}", temper)); 
-            //llenamos la lista con la clase que definimos
+            contCoincide.Add(new _classContInf(contacto.gAnombre, contacto.telef,contacto.correo));
+//            nombres.Add(string.Format("{0}", "{1}", temper, numcont));
             ngAPerson.text = temper;
             gacont = temper;
-            numcont = contacto.telef;
+            numcont = contacto.telef; 
+            //tomamos la información de nombre y teléfono de la base de datos
             //break;
             }
             else 
             ngAPerson.text = "no encontramos a la persona";
         }
-        for (int i = 0; i<nombres.Count; i++  )
-        {
-            print("nombres en lista " + nombres[i]); 
+        //imprimimos la lista de coincidencias. 
+        foreach(_classContInf coincide in contCoincide){
+            print("coincidencias " + coincide.gAnombre + " tel  " + coincide.telef + " mail " + coincide.correo ) ;
         }
+/*        for (int i = 0; i<nombres.Count; i++  )
+        {
+            Console.WriteLine(nombres);
+            print("nombres en lista " + nombres.ToString()); 
+            
+        }
+
+        foreach(string coinci in nombres){
+            print("nombres en lista2 " + nombres.ToString());
+        }
+*/
         yield return null;
     }
 }
