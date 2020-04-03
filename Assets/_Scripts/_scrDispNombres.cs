@@ -14,10 +14,7 @@ public class _scrDispNombres : MonoBehaviour
     private string stgvisita, stggAperson, temper;
     public static string numcont, gacont;
     [SerializeField] _ScrBDCont basecontactos;
-    [SerializeField] _classContInf listacont;
-
-    private Transform posdispnm;
-    public GameObject dispnom;
+    public _classContInf listacont;
 
     private List<string> nombres = new List<string>();
     
@@ -31,7 +28,6 @@ public class _scrDispNombres : MonoBehaviour
 
         if (gameObject.tag == "gAPerson") {
             basecontactos = GameObject.FindGameObjectWithTag("contactos").GetComponent<_ScrBDCont>();
-            posdispnm = GameObject.FindGameObjectWithTag("gAPerson").GetComponent<Transform>();
             StartCoroutine ("displnom");
         }
     }
@@ -41,17 +37,16 @@ public class _scrDispNombres : MonoBehaviour
 
         //El nombre del colaborador gA
         stggAperson = _ScrRcbInf.stgNgAperson.ToString();
-        //Instantiate(this.gameObject, new Vector3(posdispnm.transform.position.x, posdispnm.transform.position.y,posdispnm.transform.position.z), Quaternion.identity);
-        gacont = temper;
         foreach (_classContInf contacto in basecontactos.contactosinfo){
-            print("hello wolrd");
             temper = contacto.gAnombre;
             if (temper.Contains(stggAperson))
             {
             //creamos lista que tiene nombres parecidos
             nombres.Add(string.Format("{0}", temper)); 
-            //Instantiate(this.gameObject, new Vector3(posdispnm.transform.position.x, posdispnm.transform.position.y+150,posdispnm.transform.position.z), Quaternion.identity);
-
+            //llenamos la lista con la clase que definimos
+            ngAPerson.text = temper;
+            gacont = temper;
+            numcont = contacto.telef;
             //break;
             }
             else 
