@@ -6,7 +6,7 @@ public class _ScrBDCont : MonoBehaviour
 {
     private TextAsset filepath;
     public List<_classContInf> contactosinfo = new List<_classContInf>();
-    void Start()
+    void Awake()
     {
         llenadoLista();
     }

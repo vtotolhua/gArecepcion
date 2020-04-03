@@ -14,7 +14,9 @@ public class _scrDispNombres : MonoBehaviour
     private string stgvisita, stggAperson, temper;
     public static string numcont, gacont;
     [SerializeField] _ScrBDCont basecontactos;
+    private GameObject dbcontact;
     public _classContInf listacont;
+
 
     private List<string> nombres = new List<string>();
     
@@ -27,14 +29,17 @@ public class _scrDispNombres : MonoBehaviour
         }
 
         if (gameObject.tag == "gAPerson") {
-            basecontactos = GameObject.FindGameObjectWithTag("contactos").GetComponent<_ScrBDCont>();
+            if (GameObject.FindWithTag("contactos")!=null){
+                dbcontact = GameObject.FindWithTag("contactos");
+                basecontactos = dbcontact.GetComponent<_ScrBDCont>();
+//                print ("base cargada"); 
+            }
             StartCoroutine ("displnom");
         }
     }
 
     IEnumerator displnom ()
     {
-
         //El nombre del colaborador gA
         stggAperson = _ScrRcbInf.stgNgAperson.ToString();
         foreach (_classContInf contacto in basecontactos.contactosinfo){
@@ -56,40 +61,6 @@ public class _scrDispNombres : MonoBehaviour
         {
             print("nombres en lista " + nombres[i]); 
         }
-
-
-/************************************************************
-        stggAperson = _ScrRcbInf.stgNgAperson.ToString();
-            foreach (_classContInf contacto in basecontactos.contactosinfo)
-            {
-                temper = contacto.gAnombre;
-                if(temper.Contains(stggAperson) == true)
-                {
-                    ngAPerson.text = temper;
-                    gacont = temper;
-                    numcont = contacto.telef;
-                    break;
-                }
-                else
-                    ngAPerson.text = "no encontramos a la persona";
-            }
-***************************************************************/
-
-/*
-        //El nombre del colaborador gA
-        stggAperson = _ScrRcbInf.stgNgAperson.ToString();
-        foreach (_classContInf contacto in basecontactos.contactosinfo){
-            string nom = contacto.gAnombre.ToString();
-            if (nom.Contains(stggAperson)){
-            nombres.Add(string.Format("{0}", nom));    
-            }
-        }
-        for (int i = 0; i<nombres.Count; i++  )
-        {
-            print("nombres en lista " + nombres[i]); 
-        }
-*/
-
         yield return null;
     }
 }
