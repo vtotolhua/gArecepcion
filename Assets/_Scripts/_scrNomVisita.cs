@@ -15,7 +15,6 @@ public class _scrNomVisita : MonoBehaviour
         if (GameObject.FindWithTag("visita")!= null)  {
             stgvisita = _ScrRcbInf.stgNvisit.ToString();
             nvisita.text = stgvisita;
-            //Debug.Log("verifv " + stgvisita);
         }
     }
 }
