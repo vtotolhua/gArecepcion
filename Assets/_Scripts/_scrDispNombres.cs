@@ -11,27 +11,34 @@ public class _scrDispNombres : MonoBehaviour
     /* con el nombre que escribe el usuario y guarda las coincidencias en una nueva lista*********/
     /*estos se muestran en la parte de la confirmación de los datos **********************************/
     /*************************************************************************************************/
-    public  TMP_Text nvisita, ngAPerson;
-    private string stgvisita, stggAperson, temper;
+    public  TMP_Text ngAPerson;
+    private string stggAperson, temper;
     //Estas dos variables nos sirven para llenar los datos del script _scrEnvMsg
     public static string numcont, gacont;
     [SerializeField] _ScrBDCont basecontactos;
     public List<_classContInf> contCoincide = new List<_classContInf>(); 
-    private GameObject dbcontact;
+    private GameObject dbcontact, gaperstx;
     public _classContInf listacont;
+    private Transform gaperspos;
 
 
     private List<string> nombres = new List<string>();
     
     void Start()
-    {
-        if (gameObject.tag == "visita") {
+    {       
+/*        if (gameObject.tag == "visita") {
             stgvisita = _ScrRcbInf.stgNvisit.ToString();
             nvisita.text = stgvisita;
             //Debug.Log("verifv " + stgvisita);
         }
-
+*/
         if (gameObject.tag == "gAPerson") {
+            
+            if (GameObject.FindWithTag("gAPerson") != null){
+                gaperstx = GameObject.FindWithTag("gAPerson");
+                gaperspos = gaperstx.transform;
+            }
+
             if (GameObject.FindWithTag("contactos")!=null){
                 dbcontact = GameObject.FindWithTag("contactos");
                 basecontactos = dbcontact.GetComponent<_ScrBDCont>();
