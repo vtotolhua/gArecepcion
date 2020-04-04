@@ -7,11 +7,13 @@ using System;
 public class _scrDispNombres : MonoBehaviour
 {
     /*************************************************************************************************/
-    /*Esta clase nos permite mostrar los nombres que escribión el usuario*****************************/
+    /*Esta clase hace una comparación de la base de datos de contactos*****************************/
+    /* con el nombre que escribe el usuario y guarda las coincidencias en una nueva lista*********/
     /*estos se muestran en la parte de la confirmación de los datos **********************************/
     /*************************************************************************************************/
     public  TMP_Text nvisita, ngAPerson;
     private string stgvisita, stggAperson, temper;
+    //Estas dos variables nos sirven para llenar los datos del script _scrEnvMsg
     public static string numcont, gacont;
     [SerializeField] _ScrBDCont basecontactos;
     public List<_classContInf> contCoincide = new List<_classContInf>(); 
@@ -52,9 +54,9 @@ public class _scrDispNombres : MonoBehaviour
             {
             //creamos lista que tiene nombres parecidos
             contCoincide.Add(new _classContInf(contacto.gAnombre, contacto.telef,contacto.correo));
-//           ngAPerson.text = temper;
-//           gacont = temper;
-//           numcont = contacto.telef; 
+//           ngAPerson.text = temper;   //nos sirve para poner el nombre en econtrado
+//           gacont = temper;       //no sive para llenar datos en el mensaje a enviar 
+//           numcont = contacto.telef;   //obtenemos el teléfono de la persona a la que se envía el mensaje
 //           break;
             }
             else 
