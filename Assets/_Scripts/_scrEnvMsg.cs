@@ -8,9 +8,9 @@ public class _scrEnvMsg : MonoBehaviour
     /******y envía el mensaje al colaborador de gA******************************************/
     /***************************************************************************************/
     public TMP_InputField msgEnv;
-    public TMP_Text usuario1, usuario2;
+    //public TMP_Text usuario1, usuario2;
     public GameObject panel1, panel2;
-    public string stgnumgApers, stgmsgtxt, URL;
+    public string stgnumgApers, stgmsgtxt, stgcorreogApers , URL;
     private TMP_InputField.SubmitEvent escMsg;
     //private _scrDispNombres dispnom;
 
@@ -19,8 +19,8 @@ public class _scrEnvMsg : MonoBehaviour
     {
         //stgnumgApers = "0";
         //msgEnv = panel1.GetComponent<TMP_InputField>();
-        usuario1.text = _scrDispNombres.gacont;
-        usuario2.text = _scrDispNombres.gacont;
+        //usuario1.text = _scrDispNombres.gacont;
+        //usuario2.text = _scrDispNombres.gacont;
         escMsg = new TMP_InputField.SubmitEvent();
         escMsg.AddListener(escrMsg);
         msgEnv.onEndEdit = escMsg;
@@ -28,9 +28,11 @@ public class _scrEnvMsg : MonoBehaviour
 
     private void escrMsg(string msgtext) {
         stgmsgtxt = msgtext;
-        stgnumgApers = _scrDispNombres.numcont;
+        stgnumgApers = _scrNomgAperson.numcont;
+        stgcorreogApers = _scrNomgAperson.correo;
         Debug.Log("Mensaje" + stgmsgtxt);
         Debug.Log("Numero" + stgnumgApers);
+        Debug.Log("correo" + stgcorreogApers);
     }
 
     public void BtnEnvMsg() {

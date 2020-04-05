@@ -10,14 +10,24 @@ public class _scrDispNombres : MonoBehaviour
     /*Esta clase nos permite mostrar los nombres que escribión el usuario*****************************/
     /*estos se muestran en la parte de la confirmación de los datos **********************************/
     /*************************************************************************************************/
+<<<<<<< Updated upstream
     public  TMP_Text nvisita, ngAPerson;
     private string stgvisita, stggAperson, temper;
     public static string numcont, gacont;
     public _ScrBDCont basecontactos;
+=======
+    private string stggAperson, temper;
+    //Estas dos variables nos sirven para llenar los datos del script _scrEnvMsg
+    //public static string numcont, gacont;
+    [SerializeField] _ScrBDCont basecontactos;
+    public List<_classContInf> contCoincide = new List<_classContInf>(); 
+    private GameObject dbcontact; 
+>>>>>>> Stashed changes
     public _classContInf listacont;
 
     private List<string> nombres = new List<string>();
     
+<<<<<<< Updated upstream
     void Start()
     {
         if (gameObject.tag == "visita") {
@@ -27,6 +37,15 @@ public class _scrDispNombres : MonoBehaviour
         }
 
         if (gameObject.tag == "gAPerson") {
+=======
+    void Awake()
+    {       
+            if (GameObject.FindWithTag("contactos")!=null){
+                dbcontact = GameObject.FindWithTag("contactos");
+                basecontactos = dbcontact.GetComponent<_ScrBDCont>();
+//                print ("base cargada"); 
+            }
+>>>>>>> Stashed changes
             StartCoroutine ("displnom");
         }
     }
