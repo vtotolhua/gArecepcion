@@ -29,7 +29,8 @@ public class _scrPanelCoin : MonoBehaviour
             ganombre = coincidencia.gAnombre;
             gatelefono = coincidencia.telef;
             gamail = coincidencia.correo;
-            print("las coincidencias son " + "nombre "+ ganombre + " telefono " + gatelefono + " mail " + gamail);
+            //print("las coincidencias son " + "nombre "+ ganombre + " telefono " + gatelefono + " mail " + gamail);
+            
         }
         yield return null;
     }
