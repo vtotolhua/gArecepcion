@@ -7,9 +7,9 @@ using System;
 public class _scrDispNombres : MonoBehaviour
 {
     /*************************************************************************************************/
-    /*Esta clase hace una comparación de la base de datos de contactos*****************************/
-    /* con el nombre que escribe el usuario y guarda las coincidencias en una nueva lista*********/
-    /*estos se muestran en la parte de la confirmación de los datos **********************************/
+    /*Esta clase hace una comparación de la base de datos de contactos********************************/
+    /**con el nombre que escribe el usuario y guarda las coincidencias en una nueva lista*************/
+    /*esta lista se va a usar para generar botones para la confirmación de los datos******************/
     /*************************************************************************************************/
     private string stggAperson, temper;
     //Estas dos variables nos sirven para llenar los datos del script _scrEnvMsg
@@ -34,7 +34,7 @@ public class _scrDispNombres : MonoBehaviour
 
     IEnumerator displnom ()
     {
-        //El nombre del colaborador gA
+        //El input del nombre del colaborador gA por el usuario
         stggAperson = _ScrRcbInf.stgNgAperson.ToString();
         //compara el nombre que introdujo el usuario para encontrar las coincidencias en la base de datos
         //por el momento hace una lista, lo ideal es hacer spawn del objeto que muestra los nombres. 

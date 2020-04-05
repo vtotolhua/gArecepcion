@@ -313,8 +313,10 @@ GameObject:
   - component: {fileID: 181271983}
   - component: {fileID: 181271985}
   - component: {fileID: 181271984}
+  - component: {fileID: 181271986}
+  - component: {fileID: 181271987}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DespCoincidencia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37, y: 0.125}
   m_AnchorMax: {x: 0.89129174, y: 0.71933323}
-  m_AnchoredPosition: {x: -0.5, y: 35}
+  m_AnchoredPosition: {x: -12, y: 35}
   m_SizeDelta: {x: -1, y: -70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181271984
@@ -376,6 +378,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181271982}
   m_CullTransparentMesh: 0
+--- !u!114 &181271986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181271982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 50
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+--- !u!114 &181271987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181271982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbb23490f4876947ace2edb50b17689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseCoincidencias: {fileID: 0}
 --- !u!1 &310528784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,12 +2753,12 @@ PrefabInstance:
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.34014893
+      value: 524.94006
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 249.06006
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
@@ -2733,22 +2773,22 @@ PrefabInstance:
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512648, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
@@ -2760,10 +2800,50 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_lineSpacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 513
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_wordSpacing
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512649, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_paragraphSpacing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512651, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
       propertyPath: m_Name
       value: gAPerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133983950122512651, guid: c93ac415fbcbc50489b5a5355172248b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133983950122512887, guid: c93ac415fbcbc50489b5a5355172248b,
         type: 3}
