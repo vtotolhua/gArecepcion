@@ -49,7 +49,7 @@ public class _scrPanelCoin : MonoBehaviour
             print("las coincidencias son " + "linea " + nlinea  + "nombre "+ ganombre + " telefono " + gatelefono + " mail " + gamail);
             GameObject dipnomcoin = Instantiate(dispContacto, panel.transform.position, panel.transform.rotation) as GameObject;
             dipnomcoin.transform.SetParent(transpanelparent);
-            dipnomcoin.GetComponent<TMP_Text>().text = ganombre;
+            dipnomcoin.GetComponentInChildren<TMP_Text>().text = ganombre;
         }
         yield return null;
     }

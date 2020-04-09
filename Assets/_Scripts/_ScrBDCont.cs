@@ -27,11 +27,11 @@ public class _ScrBDCont : MonoBehaviour
                 }
         */
         }
-        foreach (_classContInf contacto in contactosinfo)
+/*        foreach (_classContInf contacto in contactosinfo)
         {
             print("Holos " + contacto.nlinea + " " + contacto.gAnombre + " " + contacto.telef + " " + contacto.correo);
         }
-        
+*/        
 
     }
 }
