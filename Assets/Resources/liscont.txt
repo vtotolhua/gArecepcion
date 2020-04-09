@@ -8,3 +8,5 @@ yanis maria gutierrez,1111222233,yanism@hotmail.com;
 diana laura sanchez, 1100001011, diana.lsanch@gmail.com;
 chen jose martines, 1100001011, chengmartines@gmail.com;
 isaac vladimir lopez gutierrez, 1100001011, vlals@hotmail.com;
+jose juan lopez Luna, 1100001011, noloco@hotmail.com;
+jose marco mondragon luna, 1100001011, noloco@hotmail.com;
