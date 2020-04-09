@@ -11,7 +11,7 @@ public class _scrPanelCoin : MonoBehaviour
     public GameObject dispContacto;  //objeto a instanciar
     [SerializeField] _scrDispNombres baseCoincidencias;   // script donde están las coincidencias
     public _classContInf listacoinc; //clase que tiene el formato de la tabla  
-    public static string ganombre, gatelefono, gamail; //variables que guardan los valores de cada fila de coincidencia
+    public static string nlinea, ganombre, gatelefono, gamail; //variables que guardan los valores de cada fila de coincidencia
     //[SerializeField] TMP_Text ganombrepro;
     private Transform transpanelparent;  //transform del panel para que el objeto a instanciar se genere aquí
     //public  TMP_Text ngAPerson;
@@ -40,12 +40,13 @@ public class _scrPanelCoin : MonoBehaviour
     {
         foreach (_classContInf coincidencia in baseCoincidencias.contCoincide)
         {
+            nlinea = coincidencia.nlinea;
             ganombre = coincidencia.gAnombre;
             gatelefono = coincidencia.telef;
             gamail = coincidencia.correo;
 //          ganombrepro.text = ganombre;
 
-            print("las coincidencias son " + "nombre "+ ganombre + " telefono " + gatelefono + " mail " + gamail);
+            print("las coincidencias son " + "linea " + nlinea  + "nombre "+ ganombre + " telefono " + gatelefono + " mail " + gamail);
             GameObject dipnomcoin = Instantiate(dispContacto, panel.transform.position, panel.transform.rotation) as GameObject;
             dipnomcoin.transform.SetParent(transpanelparent);
             dipnomcoin.GetComponent<TMP_Text>().text = ganombre;

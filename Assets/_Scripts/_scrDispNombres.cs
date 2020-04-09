@@ -44,7 +44,7 @@ public class _scrDispNombres : MonoBehaviour
             if (temper.Contains(stggAperson))
             {
             //creamos lista que tiene nombres parecidos
-            contCoincide.Add(new _classContInf(contacto.gAnombre, contacto.telef,contacto.correo));
+            contCoincide.Add(new _classContInf(contacto.nlinea, contacto.gAnombre, contacto.telef,contacto.correo));
 //           ngAPerson.text = temper;   //nos sirve para poner el nombre en econtrado
 //           gacont = temper;       //no sive para llenar datos en el mensaje a enviar 
 //           numcont = contacto.telef;   //obtenemos el teléfono de la persona a la que se envía el mensaje

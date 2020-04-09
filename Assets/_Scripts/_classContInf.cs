@@ -13,12 +13,17 @@ public class _classContInf
     public string telef;
     public string correo;
 
-    public _classContInf(string gANombNue,
-                       string telNue,
-                       string corrNue) 
+    public string nlinea;
+
+    public _classContInf(string nlineaNue,
+                        string gANombNue,
+                        string telNue,
+                        string corrNue) 
     {
+        nlinea = nlineaNue;
         gAnombre = gANombNue;
         telef = telNue;
         correo = corrNue;
+
     }
 }

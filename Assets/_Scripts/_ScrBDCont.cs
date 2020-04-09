@@ -20,18 +20,18 @@ public class _ScrBDCont : MonoBehaviour
         {
          //   print("linea " + i + " " + tomalineas[i]);
             string[] nomfile = tomalineas[i].Split(',');
-            contactosinfo.Add(new _classContInf(nomfile[0], nomfile[1], nomfile[2]));
+            contactosinfo.Add(new _classContInf(nomfile[0], nomfile[1], nomfile[2], nomfile[3]));
          /*       foreach (string elem in nomfile )
                 {
                     print("elemento de lista " + elem);
                 }
         */
         }
-       /* foreach (_classContInf contacto in contactosinfo)
+        foreach (_classContInf contacto in contactosinfo)
         {
-            print("Holos " + contacto.gAnombre + " " + contacto.telef + " " + contacto.correo);
+            print("Holos " + contacto.nlinea + " " + contacto.gAnombre + " " + contacto.telef + " " + contacto.correo);
         }
-        */
+        
 
     }
 }
