@@ -9,26 +9,31 @@ public class _scrEnvMsg : MonoBehaviour
     /***************************************************************************************/
     public TMP_InputField msgEnv;
     //public TMP_Text usuario1, usuario2;
-    public GameObject panel1, panel2;
+    public GameObject panel1, panel2, txtnm;
     public string stgnumgApers, stgmsgtxt, URL;
     private TMP_InputField.SubmitEvent escMsg;
+    public TMP_Text dspnm1, dspnom2;
+    private string gAcolab;  
+
     //private _scrDispNombres dispnom;
 
     // Start is called before the first frame update
     void Start()
     {
-        //stgnumgApers = "0";
-        //msgEnv = panel1.GetComponent<TMP_InputField>();
-        //usuario1.text = _scrDispNombres.gacont;
-        //usuario2.text = _scrDispNombres.gacont;
         escMsg = new TMP_InputField.SubmitEvent();
         escMsg.AddListener(escrMsg);
         msgEnv.onEndEdit = escMsg;
+
+        if (GameObject.FindWithTag("gAPerson") != null){
+            gAcolab = _scrBtnCoinci.selnom;
+            dspnm1.text = gAcolab;
+            dspnom2.text = gAcolab;
+        }
     }
 
     private void escrMsg(string msgtext) {
         stgmsgtxt = msgtext;
-        stgnumgApers = _scrDispNombres.numcont;
+        stgnumgApers = _scrBtnCoinci.seltel;
         Debug.Log("Mensaje" + stgmsgtxt);
         Debug.Log("Numero" + stgnumgApers);
     }

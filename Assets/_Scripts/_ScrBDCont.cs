@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+
+
+/*****************************************************************************/
+/************Este script lo que hace es cargar el archivo donde se tiene *****/
+/************la DB de los contactos y crear una lista con los campos de*******/
+/************linea, nombre, teléfono, email***********************************/
+/************con la finalidad de accesarla dentro del proceso*****************/
+/*****************************************************************************/
 public class _ScrBDCont : MonoBehaviour
 {
     private TextAsset filepath;
@@ -12,10 +20,12 @@ public class _ScrBDCont : MonoBehaviour
     }
     private void llenadoLista()
     {
-        //print ("lista de contactos");
+        //Cargamos la lista del path resources que nos permite guardar el archivo en la aplicación
         TextAsset filepath = Resources.Load<TextAsset>("liscont");
+        //Dividimos cada línea con el ;
         string[] tomalineas = filepath.text.Split(';');
         //print (tomalineas[1]);
+        //En esta parte tomamos cada linea, la dividimos en campos y hacemos la lista del tipo classConnInf 
         for (int i = 0; i < tomalineas.Length-1; i++)
         {
          //   print("linea " + i + " " + tomalineas[i]);

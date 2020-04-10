@@ -7,20 +7,16 @@ using System;
 public class _scrDispNombres : MonoBehaviour
 {
     /*************************************************************************************************/
-    /*Esta clase hace una comparación de la base de datos de contactos********************************/
+    /*Esta clase hace una comparación de la BD de contactos********************************/
     /**con el nombre que escribe el usuario y guarda las coincidencias en una nueva lista*************/
     /*esta lista se va a usar para generar botones para la confirmación de los datos******************/
     /*************************************************************************************************/
-    private string stggAperson, temper;
-    //Estas dos variables nos sirven para llenar los datos del script _scrEnvMsg
-    public static string numcont, gacont;
-    [SerializeField] _ScrBDCont basecontactos;
+    
+    public _classContInf listacont;
     public List<_classContInf> contCoincide = new List<_classContInf>(); 
     private GameObject dbcontact; 
-    public _classContInf listacont;
-
-
-    private List<string> nombres = new List<string>();
+    [SerializeField] _ScrBDCont basecontactos;
+    private string inptgAColabo, temper;
     
     void Start()
     {       
@@ -35,20 +31,16 @@ public class _scrDispNombres : MonoBehaviour
     IEnumerator displnom ()
     {
         //El input del nombre del colaborador gA por el usuario
-        stggAperson = _ScrRcbInf.stgNgAperson.ToString();
-        //compara el nombre que introdujo el usuario para encontrar las coincidencias en la base de datos
-        //por el momento hace una lista, lo ideal es hacer spawn del objeto que muestra los nombres. 
+        inptgAColabo = _ScrRcbInf.stgNgAperson.ToString();
+        //compara el nombre que introdujo el usuario con la DB de contactos
+        //para encontrar las coincidencias 
+        //y hacer una lista de dichas. 
         foreach (_classContInf contacto in basecontactos.contactosinfo)
         {
             temper = contacto.gAnombre;
-            if (temper.Contains(stggAperson))
+            if (temper.Contains(inptgAColabo))
             {
-            //creamos lista que tiene nombres parecidos
             contCoincide.Add(new _classContInf(contacto.nlinea, contacto.gAnombre, contacto.telef,contacto.correo));
-//           ngAPerson.text = temper;   //nos sirve para poner el nombre en econtrado
-//           gacont = temper;       //no sive para llenar datos en el mensaje a enviar 
-//           numcont = contacto.telef;   //obtenemos el teléfono de la persona a la que se envía el mensaje
-//           break;
             }
         }
         yield return null;

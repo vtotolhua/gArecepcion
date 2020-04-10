@@ -40,13 +40,6 @@ public class _scrPanelCoin : MonoBehaviour
     {
         foreach (_classContInf coincidencia in baseCoincidencias.contCoincide)
         {
-            /*
-            nlinea = coincidencia.nlinea;
-            ganombre = coincidencia.gAnombre;
-            gatelefono = coincidencia.telef;
-            gamail = coincidencia.correo;*/
-//          ganombrepro.text = ganombre;
-
             //print("las coincidencias son " + "linea " + nlinea  + " nombre "+ ganombre + " telefono " + gatelefono + " mail " + gamail);
             GameObject dipnomcoin = Instantiate(dispContacto, panel.transform.position, panel.transform.rotation) as GameObject;
             dipnomcoin.transform.SetParent(transpanelparent);

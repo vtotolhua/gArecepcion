@@ -18,13 +18,4 @@ public class _scrBtnBnvnd : MonoBehaviour
     public void Salir(){
         Application.Quit();
     }
-    /*    public void Entrevista()
-    {
-        SceneManager.LoadScene(2);
-    }
-    public void Reunion()
-    {
-        SceneManager.LoadScene(3);
-    }
-*/
 }
