@@ -9,8 +9,14 @@ public class _scrEnvMsg : MonoBehaviour
     /***************************************************************************************/
     public TMP_InputField msgEnv;
     //public TMP_Text usuario1, usuario2;
+<<<<<<< Updated upstream
     public GameObject panel1, panel2;
     public string stgnumgApers, stgmsgtxt, stgcorreogApers , URL;
+=======
+    public GameObject panel1, panel2, txtnm;
+    public string stgnumgApers, URL;
+    public static string stgmsgtxt;
+>>>>>>> Stashed changes
     private TMP_InputField.SubmitEvent escMsg;
     //private _scrDispNombres dispnom;
 
@@ -28,18 +34,24 @@ public class _scrEnvMsg : MonoBehaviour
 
     private void escrMsg(string msgtext) {
         stgmsgtxt = msgtext;
+<<<<<<< Updated upstream
         stgnumgApers = _scrNomgAperson.numcont;
         stgcorreogApers = _scrNomgAperson.correo;
         Debug.Log("Mensaje" + stgmsgtxt);
         Debug.Log("Numero" + stgnumgApers);
         Debug.Log("correo" + stgcorreogApers);
+=======
+        //stgnumgApers = _scrBtnCoinci.seltel;
+        //Debug.Log("Mensaje" + stgmsgtxt);
+        //Debug.Log("Numero" + stgnumgApers);
+>>>>>>> Stashed changes
     }
 
     public void BtnEnvMsg() {
-        URL = string.Format("sms:{0}?body={1}", stgnumgApers, System.Uri.EscapeDataString(stgmsgtxt));    
+        //URL = string.Format("sms:{0}?body={1}", stgnumgApers, System.Uri.EscapeDataString(stgmsgtxt));    
         panel1.SetActive(false);
         panel2.SetActive(true);
-        LlamaSms();
+        //LlamaSms();
     }
 
     private void LlamaSms() {
